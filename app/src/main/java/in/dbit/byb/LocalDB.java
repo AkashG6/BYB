@@ -1,23 +1,21 @@
 package in.dbit.byb;
 
-import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
-public class LocalDB extends SQLiteOpenHelper {
+import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+
+public class LocalDB extends SQLiteAssetHelper {
 
     public LocalDB(Context context) {
-        super(context, "question.db", null, 1);
+        super(context, "question.db", context.getExternalFilesDir(null).getAbsolutePath(), null, 1);
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
+    public Cursor getData(){
+        SQLiteDatabase db = this.getReadableDatabase();
 
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        Cursor result = db.rawQuery("SELECT * FROM question",null);
+        return result;
     }
 }
