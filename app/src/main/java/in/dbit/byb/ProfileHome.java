@@ -13,37 +13,21 @@ import org.w3c.dom.Text;
 
 public class ProfileHome extends AppCompatActivity {
 
-//    LocalDB db;
-//    Button viewdb;
-//    TextView qid, quest;
+    private LocalDB db;
+    private TextView quest1, quest2;
+    private Cursor result;
 
-    EasyFlipView flipView;
-    Button sdagree, dagree, dknow, agree, sagree;
+    private EasyFlipView flipView;
+    private Button sdagree, dagree, dknow, agree, sagree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_home);
 
-        //db = new LocalDB(this);
-//        viewdb = (Button) findViewById(R.id.viewdb);
-//        qid = (TextView) findViewById(R.id.qid);
-//        quest = (TextView) findViewById(R.id.quest);
-
-//        viewdb.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Cursor result = db.getData();
-//                result.moveToFirst();
-//
-//                String id = result.getString(0);
-//                String question = result.getString(1);
-//
-//                qid.setText("ID:"+id);
-//                quest.setText("Question:"+question);
-//            }
-//        });
+        db = new LocalDB(this);
+        quest1 = (TextView) findViewById(R.id.quest1);
+        quest2 = (TextView) findViewById(R.id.quest2);
 
         flipView = (EasyFlipView) findViewById(R.id.flip_view);
 
@@ -53,10 +37,18 @@ public class ProfileHome extends AppCompatActivity {
         agree = (Button) findViewById(R.id.agree);
         sagree = (Button) findViewById(R.id.sagree);
 
+        result = db.getData();
+        result.moveToFirst();
+
+        String question = result.getString(1);
+
+        quest1.setText(question);
+
         sdagree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 flipView.flipTheView();
+                changeQuest();
             }
         });
 
@@ -64,6 +56,7 @@ public class ProfileHome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 flipView.flipTheView();
+                changeQuest();
             }
         });
 
@@ -71,6 +64,7 @@ public class ProfileHome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 flipView.flipTheView();
+                changeQuest();
             }
         });
 
@@ -78,6 +72,7 @@ public class ProfileHome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 flipView.flipTheView();
+                changeQuest();
             }
         });
 
@@ -85,8 +80,21 @@ public class ProfileHome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 flipView.flipTheView();
+                changeQuest();
             }
         });
+
+    }
+
+    public void changeQuest(){
+        result.moveToNext();
+        String question = result.getString(1);
+
+        if(flipView.isBackSide())
+            quest2.setText(question);
+
+        else if(flipView.isFrontSide())
+            quest1.setText(question);
 
     }
 

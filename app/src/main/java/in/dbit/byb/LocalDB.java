@@ -9,13 +9,13 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 public class LocalDB extends SQLiteAssetHelper {
 
     public LocalDB(Context context) {
-        super(context, "question.db", context.getExternalFilesDir(null).getAbsolutePath(), null, 1);
+        super(context, "byb.db", context.getExternalFilesDir(null).getAbsolutePath(), null, 1);
     }
 
     public Cursor getData(){
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor result = db.rawQuery("SELECT * FROM question",null);
+        Cursor result = db.rawQuery("SELECT * FROM big5",null);
         return result;
     }
 }
