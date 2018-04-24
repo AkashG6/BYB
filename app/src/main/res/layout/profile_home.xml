@@ -6,40 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".ProfileHome">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:textSize="30dp"
-        android:text="Personality Profiling" />
+        app:flipOnTouch="true"
+        app:flipEnabled="true"
+        app:flipDuration="400"
+        app:flipType="horizontal"
+        >
 
-    <Button
-        android:id="@+id/viewdb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="56dp"
-        android:text="View" />
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="199dp" >
 
-    <TextView
-        android:id="@+id/qid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"
-        android:text="ID:" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello"/>
 
-    <TextView
-        android:id="@+id/quest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="206dp"
-        android:text="Question:" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="199dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hi"/>
+
+        </android.support.v7.widget.CardView>
+
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
 </RelativeLayout>

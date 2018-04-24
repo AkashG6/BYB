@@ -21,24 +21,24 @@ public class ProfileHome extends AppCompatActivity {
         setContentView(R.layout.profile_home);
 
         db = new LocalDB(this);
-        viewdb = (Button) findViewById(R.id.viewdb);
-        qid = (TextView) findViewById(R.id.qid);
-        quest = (TextView) findViewById(R.id.quest);
+//        viewdb = (Button) findViewById(R.id.viewdb);
+//        qid = (TextView) findViewById(R.id.qid);
+//        quest = (TextView) findViewById(R.id.quest);
 
-        viewdb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Cursor result = db.getData();
-                result.moveToFirst();
-
-                String id = result.getString(0);
-                String question = result.getString(1);
-
-                qid.setText("ID:"+id);
-                quest.setText("Question:"+question);
-            }
-        });
+//        viewdb.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Cursor result = db.getData();
+//                result.moveToFirst();
+//
+//                String id = result.getString(0);
+//                String question = result.getString(1);
+//
+//                qid.setText("ID:"+id);
+//                quest.setText("Question:"+question);
+//            }
+//        });
     }
 
 }
