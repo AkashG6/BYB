@@ -1,5 +1,6 @@
 package in.dbit.byb;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,35 +24,40 @@ public class testmainpage extends AppCompatActivity {
         subject_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(testmainpage.this,subject.class);
+                startActivity(intent);
             }
         });
 
         apptitude_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(testmainpage.this,apptitude.class);
+                startActivity(intent);
             }
         });
 
         soft_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(testmainpage.this,softskill.class);
+                startActivity(intent);
             }
         });
 
         sdp_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(testmainpage.this,selfdevprofile.class);
+                startActivity(intent);
             }
         });
 
         job_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(testmainpage.this,jobinterview.class);
+                startActivity(intent);
             }
         });
     }
