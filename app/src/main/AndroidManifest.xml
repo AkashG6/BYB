@@ -17,6 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProfileHome" />
+        <activity android:name=".testmainpage" />
+        <activity android:name=".subject" />
+        <activity android:name=".softskill" />
+        <activity android:name=".apptitude" />
+        <activity android:name=".jobinterview" />
+        <activity android:name=".selfdevprofile"></activity>
     </application>
 
 </manifest>
