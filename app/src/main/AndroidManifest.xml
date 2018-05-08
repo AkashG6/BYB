@@ -22,7 +22,11 @@
         <activity android:name=".softskill" />
         <activity android:name=".apptitude" />
         <activity android:name=".jobinterview" />
-        <activity android:name=".selfdevprofile"></activity>
+        <activity android:name=".selfdevprofile" />
+        <activity android:name=".communication" />
+        <activity android:name=".leadership" />
+        <activity android:name=".timemanagement" />
+        <activity android:name=".stressmanagement"></activity>
     </application>
 
 </manifest>
