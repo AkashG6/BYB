@@ -26,7 +26,9 @@
         <activity android:name=".communication" />
         <activity android:name=".leadership" />
         <activity android:name=".timemanagement" />
-        <activity android:name=".stressmanagement"></activity>
+        <activity android:name=".stressmanagement" />
+        <activity android:name=".reasoning" />
+        <activity android:name=".quantitative"></activity>
     </application>
 
 </manifest>
