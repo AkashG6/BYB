@@ -28,7 +28,10 @@
         <activity android:name=".timemanagement" />
         <activity android:name=".stressmanagement" />
         <activity android:name=".reasoning" />
-        <activity android:name=".quantitative"></activity>
+        <activity android:name=".quantitative" />
+        <activity android:name=".addschedule" />
+        <activity android:name=".manageschedule" />
+        <activity android:name=".goalEvaluation"></activity>
     </application>
 
 </manifest>
