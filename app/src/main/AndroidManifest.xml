@@ -31,7 +31,9 @@
         <activity android:name=".quantitative" />
         <activity android:name=".addschedule" />
         <activity android:name=".manageschedule" />
-        <activity android:name=".goalEvaluation"></activity>
+        <activity android:name=".goalEvaluation" />
+        <activity android:name=".HRInterviewquestion" />
+        <activity android:name=".gkquestions"></activity>
     </application>
 
 </manifest>

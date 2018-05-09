@@ -32,7 +32,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:background="@drawable/circlebackgroundpurple"
+                    android:background="@drawable/circlebackgroundyellow"
                     android:src="@drawable/ic_live_help_black_24dp"
                     android:padding="10dp"/>
                 <TextView
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Make sure you do the reasoning module"
+                    android:text="Do all the HR interviews related questions."
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -81,7 +81,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:background="@drawable/circlebackgroundblue"
-                    android:src="@drawable/ic_add_alarm_black_24dp"
+                    android:src="@drawable/ic_school_black_24dp"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -98,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Evaluate your goals as per your needs."
+                    android:text="Test your General Knowledge"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
