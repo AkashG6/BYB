@@ -38,7 +38,8 @@
         <activity android:name=".HRInterviewquestion" />
         <activity android:name=".gkquestions" />
         <activity android:name=".Resume_Main" />
-        <activity android:name=".Resume_Personal"></activity>
+        <activity android:name=".Resume_Personal" />
+        <activity android:name=".Resume_Education"></activity>
     </application>
 
 </manifest>
