@@ -3,7 +3,7 @@
     package="in.dbit.byb">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -36,7 +36,9 @@
         <activity android:name=".manageschedule" />
         <activity android:name=".goalEvaluation" />
         <activity android:name=".HRInterviewquestion" />
-        <activity android:name=".gkquestions"></activity>
+        <activity android:name=".gkquestions" />
+        <activity android:name=".Resume_Main" />
+        <activity android:name=".Resume_Personal"></activity>
     </application>
 
 </manifest>

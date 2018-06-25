@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         resume_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this,Resume_Main.class);
+                startActivity(intent);
             }
         });
 
