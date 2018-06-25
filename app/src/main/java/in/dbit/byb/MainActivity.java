@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import in.dbit.byb.PersonalityProfiling.ProfileHome;
+
 public class MainActivity extends AppCompatActivity {
 
     Button profile_btn;

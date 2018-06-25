@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfileHome" />
+        <activity android:name=".PersonalityProfiling.ProfileHome" />
         <activity android:name=".testmainpage" />
         <activity android:name=".subject" />
         <activity android:name=".softskill" />
