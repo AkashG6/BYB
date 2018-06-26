@@ -29,7 +29,7 @@ public class apptitude extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
         Intent i;
         switch (view.getId()){
-            case R.id.reasoningbtn: i = new Intent(this,reasoning.class);startActivity(i); break;
+            case R.id.reasoningbtn: i = new Intent(this,descriptionpage.class);startActivity(i); break;
             case R.id.quantitativebtn: i = new Intent(this,quantitative.class);startActivity(i); break;
             default:break;
 
