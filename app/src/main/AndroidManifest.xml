@@ -39,7 +39,8 @@
         <activity android:name=".gkquestions" />
         <activity android:name=".Resume_Main" />
         <activity android:name=".Resume_Personal" />
-        <activity android:name=".Resume_Education"></activity>
+        <activity android:name=".Resume_Education" />
+        <activity android:name=".descriptionpage"></activity>
     </application>
 
 </manifest>
