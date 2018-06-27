@@ -40,7 +40,9 @@
         <activity android:name=".Resume_Main" />
         <activity android:name=".Resume_Personal" />
         <activity android:name=".Resume_Education" />
-        <activity android:name=".Tests.descriptionpage"></activity>
+        <activity android:name=".Tests.descriptionpage" />
+        <activity android:name=".PersonalityProfiling.Big5" />
+        <activity android:name=".PersonalityProfiling.Holland"></activity>
     </application>
 
 </manifest>
