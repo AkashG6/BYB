@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import in.dbit.byb.PersonalityProfiling.ProfileHome;
+import in.dbit.byb.Tests.testmainpage;
 
 public class MainActivity extends AppCompatActivity {
 

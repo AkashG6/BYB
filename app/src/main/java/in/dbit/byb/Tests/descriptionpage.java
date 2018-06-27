@@ -1,11 +1,12 @@
-package in.dbit.byb;
+package in.dbit.byb.Tests;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import in.dbit.byb.R;
 
 public class descriptionpage extends AppCompatActivity {
 
