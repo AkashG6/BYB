@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import in.dbit.byb.MainActivity;
 import in.dbit.byb.R;
 
 public class ProfileHome extends AppCompatActivity {

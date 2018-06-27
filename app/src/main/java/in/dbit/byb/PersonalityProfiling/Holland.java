@@ -14,8 +14,8 @@ public class Holland extends AppCompatActivity {
     private EasyFlipView flipView;
     private Button dislike, sdislike, neutral, slike, like;
 
-    private int[] score = new int[48];
     private int count = 0;
+    int Re,I,A,S,E,C;
 
     private HollandQuest question;
 
@@ -40,7 +40,7 @@ public class Holland extends AppCompatActivity {
         dislike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                score[count] = 1;
+                storeScore(1);
                 flipView.flipTheView();
                 changeQuest();
             }
@@ -49,7 +49,7 @@ public class Holland extends AppCompatActivity {
         sdislike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                score[count] = 2;
+                storeScore(2);
                 flipView.flipTheView();
                 changeQuest();
             }
@@ -58,7 +58,7 @@ public class Holland extends AppCompatActivity {
         neutral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                score[count] = 3;
+                storeScore(3);
                 flipView.flipTheView();
                 changeQuest();
             }
@@ -67,7 +67,7 @@ public class Holland extends AppCompatActivity {
         slike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                score[count] = 4;
+                storeScore(4);
                 flipView.flipTheView();
                 changeQuest();
             }
@@ -76,12 +76,32 @@ public class Holland extends AppCompatActivity {
         like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                score[count] = 5;
+                storeScore(5);
                 flipView.flipTheView();
                 changeQuest();
             }
         });
 
+    }
+
+    public void storeScore(int ans){
+        if(count%6==0)
+            Re+=ans;
+
+        else if(count%6==1)
+            I+=ans;
+
+        else if(count%6==2)
+            A+=ans;
+
+        else if(count%6==3)
+            S+=ans;
+
+        else if(count%6==4)
+            E+=ans;
+
+        else
+            C+=ans;
     }
 
     public void changeQuest(){
@@ -95,27 +115,25 @@ public class Holland extends AppCompatActivity {
                 quest1.setText(question.hollandQuest[count]);
         }
 
-//        else{
-//            calculateResult();
-//        }
+        else{
+            calculateResult();
+        }
 
     }
 
     public  void calculateResult(){
-        int O,C,E,A,N;
-
-        E = 20 + score[0]-score[5]+score[10]-score[15]+score[20]-score[25]+score[30]-score[35]+score[40]-score[45];
-        A = 14 - score[1]-score[6]+score[11]-score[16]+score[21]-score[26]+score[31]-score[36]+score[41]-score[46];
-        C = 14 + score[2]-score[7]+score[12]-score[17]+score[22]-score[27]+score[32]-score[37]+score[42]-score[47];
-        N = 38 - score[3]-score[8]+score[13]-score[18]+score[23]-score[28]+score[33]-score[38]+score[43]-score[48];
-        O = 8 + score[4]-score[9]+score[14]-score[19]+score[24]-score[29]+score[34]-score[39]+score[44]-score[49];
+        Re/= 8;
+        I/= 8;
+        A/= 8;
+        S/= 8;
+        E/= 8;
+        C/= 8;
 
         if(flipView.isBackSide())
-            quest2.setText("O="+O+",C="+C+",E="+E+",A="+A+",N="+N);
+            quest2.setText("R="+Re+",I="+I+",A="+A+",S="+S+",E="+E+",C"+C);
 
         else if(flipView.isFrontSide())
-            quest1.setText("O="+O+",C="+C+",E="+E+",A="+A+",N="+N);
-
+            quest1.setText("R="+Re+",I="+I+",A="+A+",S="+S+",E="+E+",C"+C);
     }
 
 }
