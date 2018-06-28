@@ -1,5 +1,6 @@
 package in.dbit.byb.PersonalityProfiling;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -131,11 +132,13 @@ public class Big5 extends AppCompatActivity {
         N = 38 - N;
         O = 8 + O;
 
-        if(flipView.isBackSide())
-            quest2.setText("O="+O+",C="+C+",E="+E+",A="+A+",N="+N);
-
-        else if(flipView.isFrontSide())
-            quest1.setText("O="+O+",C="+C+",E="+E+",A="+A+",N="+N);
+        Intent intent = new Intent(Big5.this,Big5Result.class);
+        intent.putExtra("E",E);
+        intent.putExtra("A",A);
+        intent.putExtra("C",C);
+        intent.putExtra("N",N);
+        intent.putExtra("O",O);
+        startActivity(intent);
     }
 
 }

@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="102dp"
         android:text="Holland" />
+
 </RelativeLayout>

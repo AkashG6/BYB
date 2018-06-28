@@ -42,7 +42,9 @@
         <activity android:name=".Resume_Education" />
         <activity android:name=".Tests.descriptionpage" />
         <activity android:name=".PersonalityProfiling.Big5" />
-        <activity android:name=".PersonalityProfiling.Holland"></activity>
+        <activity android:name=".PersonalityProfiling.Holland" />
+        <activity android:name=".PersonalityProfiling.Big5Result" />
+        <activity android:name=".PersonalityProfiling.HollandResult"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package in.dbit.byb.PersonalityProfiling;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ public class Holland extends AppCompatActivity {
     private Button dislike, sdislike, neutral, slike, like;
 
     private int count = 0;
-    int Re,I,A,S,E,C;
+    private int Re,I,A,S,E,C;
 
     private HollandQuest question;
 
@@ -81,7 +82,6 @@ public class Holland extends AppCompatActivity {
                 changeQuest();
             }
         });
-
     }
 
     public void storeScore(int ans){
@@ -129,11 +129,14 @@ public class Holland extends AppCompatActivity {
         E/= 8;
         C/= 8;
 
-        if(flipView.isBackSide())
-            quest2.setText("R="+Re+",I="+I+",A="+A+",S="+S+",E="+E+",C"+C);
-
-        else if(flipView.isFrontSide())
-            quest1.setText("R="+Re+",I="+I+",A="+A+",S="+S+",E="+E+",C"+C);
+        Intent intent = new Intent(Holland.this,HollandResult.class);
+        intent.putExtra("Re",Re);
+        intent.putExtra("I",I);
+        intent.putExtra("A",A);
+        intent.putExtra("S",S);
+        intent.putExtra("E",E);
+        intent.putExtra("C",C);
+        startActivity(intent);
     }
 
 }
