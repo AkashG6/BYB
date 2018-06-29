@@ -45,8 +45,7 @@
         <activity android:name=".PersonalityProfiling.Holland" />
         <activity android:name=".PersonalityProfiling.Big5Result" />
         <activity android:name=".PersonalityProfiling.HollandResult" />
-        <activity android:name=".introprofiling" />
-        <activity android:name=".viewpersonality"></activity>
+        <activity android:name=".PersonalityProfiling.viewpersonality"></activity>
     </application>
 
 </manifest>
