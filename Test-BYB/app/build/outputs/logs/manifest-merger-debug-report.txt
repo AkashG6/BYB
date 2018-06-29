@@ -1,0 +1,103 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:1-21:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\6b1893724c298e5291198264d18ca58d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\b4983b5e005e325747146f96285ae4ac\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\9e50ce237e7e8b403b4202bfa24bfd87\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\b4ed78feaa76ce279db6c04b88ca2382\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\9c9b1a0bac02882f60af37157ed5918e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\51e6033b7abc3311ea01e400869c4e7c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a1e7a29cd6b5b1dd3c2ba148340e1d1c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\9ab36321a55cd5b37d1110b75b2a87fc\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\8b8025ffd798bc53af067d225f48790b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bb9ebe041ce7c203a8a2155222bb77f2\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\66f61991f06401bc7e7511db7658d415\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b6e29a7b55105dede40ab5256ce73503\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\b4983b5e005e325747146f96285ae4ac\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\b4983b5e005e325747146f96285ae4ac\AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:11:9-40
+activity#in.dbit.byb.testbyb.MainActivity
+ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\6b1893724c298e5291198264d18ca58d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\6b1893724c298e5291198264d18ca58d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\b4983b5e005e325747146f96285ae4ac\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\b4983b5e005e325747146f96285ae4ac\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\9e50ce237e7e8b403b4202bfa24bfd87\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\9e50ce237e7e8b403b4202bfa24bfd87\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\b4ed78feaa76ce279db6c04b88ca2382\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\b4ed78feaa76ce279db6c04b88ca2382\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\9c9b1a0bac02882f60af37157ed5918e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\9c9b1a0bac02882f60af37157ed5918e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\51e6033b7abc3311ea01e400869c4e7c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\51e6033b7abc3311ea01e400869c4e7c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a1e7a29cd6b5b1dd3c2ba148340e1d1c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a1e7a29cd6b5b1dd3c2ba148340e1d1c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\9ab36321a55cd5b37d1110b75b2a87fc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\9ab36321a55cd5b37d1110b75b2a87fc\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\8b8025ffd798bc53af067d225f48790b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\8b8025ffd798bc53af067d225f48790b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bb9ebe041ce7c203a8a2155222bb77f2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bb9ebe041ce7c203a8a2155222bb77f2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\66f61991f06401bc7e7511db7658d415\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\66f61991f06401bc7e7511db7658d415\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b6e29a7b55105dede40ab5256ce73503\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b6e29a7b55105dede40ab5256ce73503\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dell\Desktop\BYB\Test-BYB\app\src\main\AndroidManifest.xml
