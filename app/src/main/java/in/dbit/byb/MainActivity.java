@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import in.dbit.byb.PersonalityProfiling.ProfileHome;
+import in.dbit.byb.PersonalityProfiling.introprofiling;
 import in.dbit.byb.Tests.testmainpage;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         profile_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,ProfileHome.class);
+                Intent intent = new Intent(MainActivity.this,introprofiling.class);
                 startActivity(intent);
             }
         });
