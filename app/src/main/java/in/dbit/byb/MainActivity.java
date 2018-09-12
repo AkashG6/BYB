@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         access_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent= new Intent(MainActivity.this, in.dbit.byb.ControlAccess.loginpage.class);
+                startActivity(intent);
 
             }
         });
