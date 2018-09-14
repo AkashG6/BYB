@@ -45,10 +45,11 @@
         <activity android:name=".PersonalityProfiling.Holland" />
         <activity android:name=".PersonalityProfiling.Big5Result" />
         <activity android:name=".PersonalityProfiling.HollandResult" />
-        <activity android:name=".PersonalityProfiling.viewpersonality"></activity>
-        <activity android:name=".ControlAccess.loginpage"></activity>
-        <activity android:name=".ControlAccess.registration"></activity>
-        <activity android:name=".ControlAccess.dbcon"></activity>
+        <activity android:name=".PersonalityProfiling.viewpersonality" />
+        <activity android:name=".ControlAccess.loginpage" />
+        <activity android:name=".ControlAccess.registration" />
+        <activity android:name=".ControlAccess.dbcon" />
+        <activity android:name=".PersonalityProfiling.HollandJobs"></activity>
     </application>
 
 </manifest>
