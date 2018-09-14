@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import in.dbit.byb.PersonalityProfiling.ProfileHome;
+import in.dbit.byb.PersonalityProfiling.introprofiling;
+import in.dbit.byb.Tests.testmainpage;
+
 public class MainActivity extends AppCompatActivity {
 
     Button profile_btn;
@@ -34,14 +38,16 @@ public class MainActivity extends AppCompatActivity {
         test_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this,testmainpage.class);
+                startActivity(intent);
             }
         });
 
         resume_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this,Resume_Main.class);
+                startActivity(intent);
             }
         });
 

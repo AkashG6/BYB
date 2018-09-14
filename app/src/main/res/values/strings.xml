@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">BYB</string>
+    <string name="title_activity_shyam">shyam</string>
+    <string name="aptitude">Aptitude</string>
+    <string name="message_text">1. sdkjdkjddkksjdkjsokjlkajksjd;kljskajdkasjkdjksjakdjksjkdjkd
+    2. asjaksjkjkajksjkabsdjsjdhjhjhajshjHAKSAksjlkaJSLKJaughghadghgjhhjsghgqhIQUIUSUIAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjwuiinmmmmmmmmmmmmmmmmxzahksjjjqiomzxnzvxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxbjaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmzn BZknbkjbkjhAJHJhalhkkhsghdrlkekjdjwepidnsdkasndkiqjwidjqjdsqndksandnsdnojqjowjdondsandlnsdlnsdnqowdowjoeiwoqijeiwqdjqsndsndjsncs csdjnjsdjsqdoowdosdnsjdjscancsjndlsadkljiwqodjsndsjnmasndjsdjwdjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmn</string>
+    <string name="title_activity_big5">Big5</string>
+    <string name="intro_message"> sdkjdkjddkksjdkjsokjlkajksjd;kljskajdkasjkdjksjakdjksjkdjkd
+    2. asjaksjkjkajksjkabsdjsjdhjh</string>
+    <string name="personality_profiling">Personality Profiling</string>
 </resources>
