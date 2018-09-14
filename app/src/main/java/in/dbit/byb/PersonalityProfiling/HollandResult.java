@@ -3,6 +3,8 @@ package in.dbit.byb.PersonalityProfiling;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -17,10 +19,13 @@ import in.dbit.byb.R;
 
 public class HollandResult extends AppCompatActivity {
 
+    private Button view_jobs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_holland_result);
+
+        view_jobs = (Button) findViewById(R.id.view_jobs);
 
         Bundle extras = getIntent().getExtras();
         int Re = extras.getInt("Re");
@@ -58,5 +63,12 @@ public class HollandResult extends AppCompatActivity {
 
         int color = ContextCompat.getColor(HollandResult.this, R.color.colorPrimary);
         dataset.setColor(color);
+
+        view_jobs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
