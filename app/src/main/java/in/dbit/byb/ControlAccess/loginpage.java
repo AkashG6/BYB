@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import in.dbit.byb.R;
+
 public class loginpage extends AppCompatActivity {
     Button submit;
     Button signup;
@@ -24,12 +25,16 @@ public class loginpage extends AppCompatActivity {
         tv=(TextView) findViewById(R.id.tv);
         submit=(Button) findViewById(R.id.login);
         signup=(Button) findViewById(R.id.signup);
-
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                edt1.getText();
-                edt2.getText();
+                String str1=edt1.getText().toString();
+                String str2=edt2.getText().toString();
+
+                Intent intent=new Intent(loginpage.this,dbcon.class);
+                startActivity(intent);
+
+
 
 
 

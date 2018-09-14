@@ -65,6 +65,7 @@
             android:id="@+id/email"
             android:inputType="textEmailAddress" />
     </android.support.design.widget.TextInputLayout>
+
     <TextView
         android:id="@+id/whoareyou"
         android:layout_width="match_parent"
@@ -73,23 +74,32 @@
         android:textSize="20dp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/student"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Student" />
-
-    <RadioButton
-        android:id="@+id/faculty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Faculty" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom"
         android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/radiog"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Student" />
+
+            <RadioButton
+                android:id="@+id/faculty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Faculty" />
+        </RadioGroup>
 
         <Button
             android:id="@+id/submita"
