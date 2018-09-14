@@ -17,6 +17,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import in.dbit.byb.R;
 
 public class registration extends AppCompatActivity {
@@ -48,7 +51,7 @@ public class registration extends AppCompatActivity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nm, un, ps, em;
+                final String nm, un, ps, em;
                 nm = name.getText().toString();
                 un = username.getText().toString();
                 ps = password.getText().toString();
@@ -58,9 +61,11 @@ public class registration extends AppCompatActivity {
                 String rb=radioButton.getText().toString();
                 if(nm!=null && un!=null && ps!=null && em!=null && selectedId!=0)
                 {
-                    if(rb=="student") {
+                    if(rb.equals("Student")) {
+                        RequestQueue queue1 = Volley.newRequestQueue(registration.this);
                         String url = "http://bybtest.000webhostapp.com/student.php";
-                        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+
+                        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                                 new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
@@ -74,13 +79,28 @@ public class registration extends AppCompatActivity {
                                 Toast toast= Toast.makeText(getApplicationContext(),"Unable to connect",Toast.LENGTH_SHORT);
                                 toast.show();
                             }
-                        });
-                    }
+                        }) {
+                            protected Map<String,String> getParams() {
+                                Map<String, String> params = new HashMap<String, String>();
+                                params.put("nm", nm);
+                                params.put("un", un);
+                                params.put("ps", ps);
+                                params.put("em", em);
+                                return params;
+
+                            }
+                        };
+                        queue1.add(stringRequest);
+                        }
+
 
                 }
 
 
-            }
-        });
+                }
+
+
+            });
+        }
     }
-}
+
