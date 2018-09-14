@@ -46,6 +46,9 @@
         <activity android:name=".PersonalityProfiling.Big5Result" />
         <activity android:name=".PersonalityProfiling.HollandResult" />
         <activity android:name=".PersonalityProfiling.viewpersonality"></activity>
+        <activity android:name=".ControlAccess.loginpage"></activity>
+        <activity android:name=".ControlAccess.registration"></activity>
+        <activity android:name=".ControlAccess.dbcon"></activity>
     </application>
 
 </manifest>
