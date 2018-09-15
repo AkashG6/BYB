@@ -1,6 +1,4 @@
 package in.dbit.byb.ControlAccess;
-import in.dbit.byb.ControlAccess.loginpage;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -27,22 +25,24 @@ import java.util.Map;
 
 import in.dbit.byb.R;
 
-public class dbcon extends AppCompatActivity {
+public class faculty extends AppCompatActivity {
     TextView txtcon;
     final RequestQueue queue = Volley.newRequestQueue(this);
-    loginpage login=new loginpage();
+    loginpage login2=new loginpage();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dbcon);
+        setContentView(R.layout.activity_faculty);
         txtcon=(TextView) findViewById(R.id.textcon);
-        String url = "http://bybtest.000webhostapp.com/login.php";
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+        String url = "http://bybtest.000webhostapp.com/loginfaculty.php";
+         final StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        txtcon.setText("Logged in as student");
+                        txtcon.setText("You are logged in as Faculty");
+
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -53,8 +53,8 @@ public class dbcon extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("str1", login.str1);
-                params.put("str2", login.str2);
+                params.put("str1", login2.str1);
+                params.put("str2", login2.str2);
 
                 return params;
 
@@ -66,9 +66,7 @@ public class dbcon extends AppCompatActivity {
 
 
 
-                    }
-
 
 
     }
-
+}

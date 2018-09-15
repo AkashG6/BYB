@@ -54,11 +54,42 @@
         android:layout_height="wrap_content">
 
     </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/youare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You are:"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student"
+                android:id="@+id/std"
+                />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Faculty"
+                android:id="@+id/fac"/>
+        </RadioGroup>
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="top"
         android:orientation="horizontal">
+
 
         <Button
             android:id="@+id/login"

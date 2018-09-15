@@ -48,6 +48,7 @@ public class registration extends AppCompatActivity {
         sign = (TextView) findViewById(R.id.sign);
         RequestQueue queue = Volley.newRequestQueue(this);
 
+
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,10 +59,9 @@ public class registration extends AppCompatActivity {
                 em = email.getText().toString();
                 int selectedId = rg.getCheckedRadioButtonId();
                 radioButton = (RadioButton) findViewById(selectedId);
-                String rb=radioButton.getText().toString();
-                if(nm!=null && un!=null && ps!=null && em!=null && selectedId!=0)
-                {
-                    if(rb.equals("Student")) {
+                String rb = radioButton.getText().toString();
+                if (nm != null && un != null && ps != null && em != null && selectedId != 0) {
+                    if (rb.equals("Student")) {
                         RequestQueue queue1 = Volley.newRequestQueue(registration.this);
                         String url = "http://bybtest.000webhostapp.com/student.php";
 
@@ -69,18 +69,20 @@ public class registration extends AppCompatActivity {
                                 new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
-                                        Toast t=Toast.makeText(getApplicationContext(),"Data Recorded",Toast.LENGTH_SHORT);
+
+                                        Toast t = Toast.makeText(getApplicationContext(), "Data Recorded", Toast.LENGTH_SHORT);
                                         t.show();
 
                                     }
                                 }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast toast= Toast.makeText(getApplicationContext(),"Unable to connect",Toast.LENGTH_SHORT);
+                                Toast toast = Toast.makeText(getApplicationContext(), "Unable to connect", Toast.LENGTH_SHORT);
                                 toast.show();
                             }
                         }) {
-                            protected Map<String,String> getParams() {
+                            @Override
+                            protected Map<String, String> getParams() {
                                 Map<String, String> params = new HashMap<String, String>();
                                 params.put("nm", nm);
                                 params.put("un", un);
@@ -91,16 +93,68 @@ public class registration extends AppCompatActivity {
                             }
                         };
                         queue1.add(stringRequest);
+                        if (queue1.add(stringRequest).equals(false)) {
+                            Toast.makeText(getApplicationContext(), "User already exists", Toast.LENGTH_SHORT).show();
                         }
 
 
+                    } else {
+                        RequestQueue queue2 = Volley.newRequestQueue(registration.this);
+                        String url = "http://bybtest.000webhostapp.com/faculty.php";
+
+                        StringRequest stringRequest1 = new StringRequest(Request.Method.POST, url,
+                                new Response.Listener<String>() {
+                                    @Override
+                                    public void onResponse(String response) {
+
+                                        Toast t = Toast.makeText(getApplicationContext(), "Data Recorded", Toast.LENGTH_SHORT);
+                                        t.show();
+
+                                    }
+                                }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast toast = Toast.makeText(getApplicationContext(), "Unable to connect", Toast.LENGTH_SHORT);
+                                toast.show();
+                            }
+                        }) {
+                            @Override
+                            protected Map<String, String> getParams() {
+                                Map<String, String> params = new HashMap<String, String>();
+                                params.put("nm", nm);
+                                params.put("un", un);
+                                params.put("ps", ps);
+                                params.put("em", em);
+                                return params;
+
+                            }
+                        };
+                        queue2.add(stringRequest1);
+                        if (queue2.add(stringRequest1).equals(false)) {
+                            Toast.makeText(getApplicationContext(), "User already exists", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+
+                } else if (nm.equals(null)) {
+                    Toast.makeText(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
+                } else if (un.equals(null)) {
+                    Toast.makeText(getApplicationContext(), "Please enter username", Toast.LENGTH_SHORT).show();
+
                 }
+                else if(ps.equals(null))
+                    Toast.makeText(getApplicationContext(), "Please enter password", Toast.LENGTH_SHORT).show();
+                else if(em.equals(null))
+                    Toast.makeText(getApplicationContext(), "Please enter email", Toast.LENGTH_SHORT).show();
+                else if(selectedId == 0)
+                    Toast.makeText(getApplicationContext(), "Please Select either faculty or student", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(getApplicationContext(), "Incomplete credentials", Toast.LENGTH_SHORT).show();
 
+            }
 
-                }
-
-
-            });
-        }
+            ;
+        });
     }
+}
 
