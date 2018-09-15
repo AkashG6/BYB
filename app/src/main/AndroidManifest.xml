@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="in.dbit.byb">
@@ -52,62 +51,4 @@
         <activity android:name=".ControlAccess.dbcon"></activity>
         <activity android:name=".ControlAccess.faculty"></activity>
     </application>
-
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="in.dbit.byb">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".PersonalityProfiling.ProfileHome" />
-        <activity android:name=".Tests.testmainpage" />
-        <activity android:name=".Tests.subject" />
-        <activity android:name=".Tests.softskill" />
-        <activity android:name=".Tests.apptitude" />
-        <activity android:name=".Tests.jobinterview" />
-        <activity android:name=".Tests.selfdevprofile" />
-        <activity android:name=".Tests.communication" />
-        <activity android:name=".Tests.leadership" />
-        <activity android:name=".Tests.timemanagement" />
-        <activity android:name=".Tests.stressmanagement" />
-        <activity android:name=".Tests.reasoning" />
-        <activity android:name=".Tests.quantitative" />
-        <activity android:name=".Tests.addschedule" />
-        <activity android:name=".Tests.manageschedule" />
-        <activity android:name=".Tests.goalEvaluation" />
-        <activity android:name=".Tests.reviveTask" />
-        <activity android:name=".Tests.HRInterviewquestion" />
-        <activity android:name=".Tests.gkquestions" />
-        <activity android:name=".Resume_Main" />
-        <activity android:name=".Resume_Personal" />
-        <activity android:name=".Resume_Education" />
-        <activity android:name=".Tests.descriptionpage" />
-        <activity android:name=".PersonalityProfiling.Big5" />
-        <activity android:name=".PersonalityProfiling.Holland" />
-        <activity android:name=".PersonalityProfiling.Big5Result" />
-        <activity android:name=".PersonalityProfiling.HollandResult" />
-        <activity android:name=".PersonalityProfiling.viewpersonality" />
-        <activity android:name=".ControlAccess.loginpage" />
-        <activity android:name=".ControlAccess.registration" />
-        <activity android:name=".ControlAccess.dbcon" />
-        <activity android:name=".PersonalityProfiling.HollandJobs"></activity>
-    </application>
-
->>>>>>> 9434ce1e235f44c8e0f39632d83d1afc6bff22b3
 </manifest>
