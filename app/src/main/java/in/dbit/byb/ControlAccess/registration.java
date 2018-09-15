@@ -130,9 +130,7 @@ public class registration extends AppCompatActivity {
                             }
                         };
                         queue2.add(stringRequest1);
-                        if (queue2.add(stringRequest1).equals(false)) {
-                            Toast.makeText(getApplicationContext(), "User already exists", Toast.LENGTH_SHORT).show();
-                        }
+                        
                     }
 
 
