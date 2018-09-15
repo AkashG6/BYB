@@ -21,6 +21,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import in.dbit.byb.R;
 
 public class manageschedule extends AppCompatActivity {
@@ -43,6 +48,11 @@ public class manageschedule extends AppCompatActivity {
                     LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             cmargins.setMargins(35, 35, 35, 35);
 
+            Calendar c = Calendar.getInstance();
+            Integer year = c.get(Calendar.YEAR);
+            Integer month = c.get(Calendar.MONTH)+1;
+            Integer day = c.get(Calendar.DAY_OF_MONTH);
+
             for(int j=0; j<jsonArray.length(); j++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(j);
 
@@ -52,63 +62,69 @@ public class manageschedule extends AppCompatActivity {
                 Integer dyear = jsonObject.getInt("deadline_year");
                 Integer revives = jsonObject.getInt("revives_left");
 
-                // Create LinearLayout
-                CardView cv = new CardView(this);
-                cv.setLayoutParams(cmargins);
+                SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+                Date date1 = sdf.parse(dmonth + "/" + dday + "/" + dyear);
+                Date date2 = sdf.parse(month + "/" + day + "/" + year);
 
-                LinearLayout ll = new LinearLayout(this);
-                ll.setOrientation(LinearLayout.VERTICAL);
-                ll.setPadding(40,40, 40,40);
+                if (date1.after(date2)) {
+                    // Create LinearLayout
+                    CardView cv = new CardView(this);
+                    cv.setLayoutParams(cmargins);
+
+                    LinearLayout ll = new LinearLayout(this);
+                    ll.setOrientation(LinearLayout.VERTICAL);
+                    ll.setPadding(40, 40, 40, 40);
 
 
-                // Create TextView
-                TextView task1 = new TextView(this);
-                task1.setTextSize(18);
-                task1.setText("Task: "+stask);
-                ll.addView(task1);
+                    // Create TextView
+                    TextView task1 = new TextView(this);
+                    task1.setTextSize(18);
+                    task1.setText("Task: " + stask);
+                    ll.addView(task1);
 
-                // Create TextView
-                TextView deadline = new TextView(this);
-                deadline.setTextSize(18);
-                deadline.setText("Deadline:"+dday+"/"+dmonth+"/"+dyear);
-                ll.addView(deadline);
+                    // Create TextView
+                    TextView deadline = new TextView(this);
+                    deadline.setTextSize(18);
+                    deadline.setText("Deadline:" + dday + "/" + dmonth + "/" + dyear);
+                    ll.addView(deadline);
 
-                // Create TextView
-                TextView revives1 = new TextView(this);
-                revives1.setTextSize(18);
-                revives1.setText("Revives Left:"+revives);
-                ll.addView(revives1);
+                    // Create TextView
+                    TextView revives1 = new TextView(this);
+                    revives1.setTextSize(18);
+                    revives1.setText("Revives Left:" + revives);
+                    ll.addView(revives1);
 
-                // Create Button
-                final Button btn = new Button(this);
-                // Give button an ID
-                btn.setId(j+1);
-                btn.setText("Submit for completion");
-                // set the layoutParams on the button
-                btn.setLayoutParams(params);
+                    // Create Submit Button
+                    final Button btn = new Button(this);
+                    // Give button an ID
+                    btn.setId(j + 1);
+                    btn.setText("Submit for Completion");
+                    // set the layoutParams on the button
+                    btn.setLayoutParams(params);
 
-                final int index = j;
-                // Set click listener for button
-                btn.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View v) {
+                    final int index = j;
+                    // Set click listener for button
+                    btn.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
 
-                        Log.i("TAG", "index :" + index);
+                            Log.i("TAG", "index :" + index);
 
-                        Toast.makeText(getApplicationContext(),
-                                "Clicked Button Index :" + index,
-                                Toast.LENGTH_LONG).show();
-                    }
-                });
+                            Toast.makeText(getApplicationContext(),
+                                    "Clicked Button Index :" + index,
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    });
 
-                //Add button to LinearLayout
-                ll.addView(btn);
-                cv.addView(ll);
-                //Add button to LinearLayout defined in XML
-                lm.addView(cv);
+                    //Add button to LinearLayout
+                    ll.addView(btn);
+                    cv.addView(ll);
+                    //Add button to LinearLayout defined in XML
+                    lm.addView(cv);
 
+                }
             }
 
-        } catch (JSONException e) {
+        } catch (JSONException | ParseException e) {
             Toast.makeText(manageschedule.this, String.valueOf("ERROR!!! "+e), Toast.LENGTH_LONG).show();
             Log.e("MYAPP", "unexpected JSON exception", e);
         }
@@ -141,14 +157,5 @@ public class manageschedule extends AppCompatActivity {
             }
         });
         queue.add(strreq);
-
-
-
-
-        //Create four
-
     }
-
-
-
 }

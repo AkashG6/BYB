@@ -35,6 +35,7 @@
         <activity android:name=".Tests.addschedule" />
         <activity android:name=".Tests.manageschedule" />
         <activity android:name=".Tests.goalEvaluation" />
+        <activity android:name=".Tests.reviveTask" />
         <activity android:name=".Tests.HRInterviewquestion" />
         <activity android:name=".Tests.gkquestions" />
         <activity android:name=".Resume_Main" />
