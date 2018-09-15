@@ -31,6 +31,9 @@ public class HollandJobs extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(HollandJobs.this, android.R.layout.simple_list_item_1);
         jobs_list.setAdapter(arrayAdapter);
 
+        Bundle extras = getIntent().getExtras();
+        String HollandCode = extras.getString("Code");
+
         try {
             JSONObject obj = new JSONObject(loadJSONFromAsset());
             JSONArray job_array = obj.getJSONArray("jobs");
@@ -49,7 +52,9 @@ public class HollandJobs extends AppCompatActivity {
             }
 
             for(int i=0; i<job_array.length(); i++) {
-                arrayAdapter.add(job_name[i]);
+                if(job_code[i].equals(HollandCode)) {
+                    arrayAdapter.add(job_name[i]);
+                }
             }
         } catch (JSONException e) {
             e.printStackTrace();
