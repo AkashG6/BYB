@@ -1,5 +1,6 @@
 package in.dbit.byb.Tests;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,56 +28,56 @@ public class reasoning extends AppCompatActivity {
 
 //    private ques_Lib mQuestionLibrary = new ques_Lib();
 
-    private TextView mScoreView;
-    private TextView mQuestionView;
-    private Button mButtonChoice1;
-    private Button mButtonChoice2;
-    private Button mButtonChoice3;
-    private Button mButtonChoice4;
+    public TextView mScoreView;
+    public TextView mQuestionView;
+    public Button mButtonChoice1;
+    public Button mButtonChoice2;
+    public Button mButtonChoice3;
+    public Button mButtonChoice4;
 
-    private String mAnswer;
-    private int mScore = 0;
-    private int mQuestionNumber = 0;
-    String mQuestions [];
-    String mChoices [][];
-    String mCorrectAnswers[];
+    public String mAnswer;
+    public int mScore = 0;
+    public int mQuestionNumber = 0;
+//    String mQuestions [];
+//    String mChoices [][];
+//    String mCorrectAnswers[];
 
-    public void exec(String res) throws JSONException {
-        JSONArray jsonArray = new JSONArray(res);
+//    public void exec(String res) throws JSONException {
+//        JSONArray jsonArray = new JSONArray(res);
+//
+//        for (int j = 0; j < jsonArray.length(); j++) {
+//            JSONObject jsonObject = jsonArray.getJSONObject(j);
+//
+//            Integer no = jsonObject.getInt("No");
+//            mQuestions[j] = jsonObject.getString("Question");
+//            mChoices[j][0] = jsonObject.getString("Opt1");
+//            mChoices[j][1] = jsonObject.getString("Opt2");
+//            mChoices[j][2] = jsonObject.getString("Opt3");
+//            mChoices[j][3] = jsonObject.getString("Opt4");
+//            mCorrectAnswers[j] = jsonObject.getString("Answer");
+//        }
+//
+//    }
 
-        for (int j = 0; j < jsonArray.length(); j++) {
-            JSONObject jsonObject = jsonArray.getJSONObject(j);
+    private String mQuestions [] = {
+            "Which part of the plant holds it in the soil?",
+            "This part of the plant absorbs energy from the sun.",
+            "This part of the plant attracts bees, butterflies and hummingbirds.",
+            "The _______ holds the plant upright."
 
-            Integer no = jsonObject.getInt("No");
-            mQuestions[j] = jsonObject.getString("Question");
-            mChoices[j][0] = jsonObject.getString("Opt1");
-            mChoices[j][1] = jsonObject.getString("Opt2");
-            mChoices[j][2] = jsonObject.getString("Opt3");
-            mChoices[j][3] = jsonObject.getString("Opt4");
-            mCorrectAnswers[j] = jsonObject.getString("Answer");
-        }
+    };
 
-    }
 
-//    private String mQuestions [] = {
-//            "Which part of the plant holds it in the soil?",
-//            "This part of the plant absorbs energy from the sun.",
-//            "This part of the plant attracts bees, butterflies and hummingbirds.",
-//            "The _______ holds the plant upright."
-//
-//    };
-//
-//
-//    private String mChoices [][] = {
-//            {"Roots", "Stem", "Flower"},
-//            {"Fruit", "Leaves", "Seeds"},
-//            {"Bark", "Flower", "Roots"},
-//            {"Flower", "Leaves", "Stem"}
-//    };
-//
-//
-//
-//    private String mCorrectAnswers[] = {"Roots", "Leaves", "Flower", "Stem"};
+    private String mChoices [][] = {
+            {"Roots", "Stem", "Flower", "Leaves"},
+            {"Fruit", "Leaves", "Seeds", "Roots"},
+            {"Bark", "Flower", "Roots", "Stem"},
+            {"Flower", "Leaves", "Stem", "Roots"}
+    };
+
+
+
+    private String mCorrectAnswers[] = {"Roots", "Leaves", "Flower", "Stem"};
 
 
 
@@ -125,30 +126,30 @@ public class reasoning extends AppCompatActivity {
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         mButtonChoice4 = (Button)findViewById(R.id.choice4);
 
-        RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://bybtest.000webhostapp.com/ques_apti.php";
+//        RequestQueue queue = Volley.newRequestQueue(this);
+//        String url = "http://bybtest.000webhostapp.com/ques_apti.php";
+//
+//        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+//                new Response.Listener<String>() {
+//                    @Override
+//                    public void onResponse(String response) {
+//                        //
+//                        Toast.makeText(reasoning.this, "Success", Toast.LENGTH_LONG).show();
+//                        Log.d("Response is: ", response);
+//                        try {
+//                            exec(response);
+//                        } catch (JSONException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                mQuestionView.setText("That didn't work!");
+//            }
+//        });
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        //
-                        Toast.makeText(reasoning.this, "Success", Toast.LENGTH_LONG).show();
-                        Log.d("Response is: ", response);
-                        try {
-                            exec(response);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                mQuestionView.setText("That didn't work!");
-            }
-        });
-
-        queue.add(stringRequest);
+//        queue.add(stringRequest);
 
         updateQuestion();
 
@@ -250,6 +251,14 @@ public class reasoning extends AppCompatActivity {
 
         mAnswer = getCorrectAnswer(mQuestionNumber);
         mQuestionNumber++;
+
+        if (mQuestionNumber >= mQuestions.length){
+            Intent i = new Intent(reasoning.this, final_score.class);
+            Bundle bundle = new Bundle();
+            bundle.putInt("stuff", mScore);
+            i.putExtras(bundle);
+            startActivity(i);
+        }
     }
 
 
