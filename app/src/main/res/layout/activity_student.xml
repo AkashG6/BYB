@@ -6,10 +6,11 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textcon"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="86dp" />
+        tools:layout_editor_absoluteY="56dp" />
 </android.support.constraint.ConstraintLayout>

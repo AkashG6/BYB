@@ -48,5 +48,6 @@
         <activity android:name=".ControlAccess.registration"></activity>
         <activity android:name=".ControlAccess.dbcon"></activity>
         <activity android:name=".ControlAccess.faculty"></activity>
+        <activity android:name=".ControlAccess.student"></activity>
     </application>
 </manifest>

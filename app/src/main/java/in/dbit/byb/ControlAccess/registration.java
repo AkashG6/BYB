@@ -1,6 +1,8 @@
 package in.dbit.byb.ControlAccess;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +13,8 @@ import android.widget.Toast;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -50,7 +54,6 @@ public class registration extends AppCompatActivity {
 
         sign = (TextView) findViewById(R.id.sign);
         RequestQueue queue = Volley.newRequestQueue(this);
-        String json;
 
 
         sub.setOnClickListener(new View.OnClickListener() {
@@ -64,24 +67,31 @@ public class registration extends AppCompatActivity {
                 int selectedId = rg.getCheckedRadioButtonId();
                 radioButton = (RadioButton) findViewById(selectedId);
                 String rb = radioButton.getText().toString();
+
                 if (nm != null && un != null && ps != null && em != null && selectedId != 0) {
                     if (rb.equals("Student")) {
                         RequestQueue queue1 = Volley.newRequestQueue(registration.this);
                         String url = "http://bybtest.000webhostapp.com/student.php";
-
-                        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                                 new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
-
+                                        if(response.equals("Successfully Signed In"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Registered successfully",Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(getApplicationContext(), loginpage.class));
+                                        }
+                                        else if(response.equals("Username exist"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Username exists",Toast.LENGTH_SHORT).show();
+                                        }
 
 
                                     }
                                 }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast toast = Toast.makeText(getApplicationContext(), "Unable to connect", Toast.LENGTH_SHORT);
-                                toast.show();
+                               Toast.makeText(getApplicationContext(),"Error response",Toast.LENGTH_SHORT).show();
                             }
 
                         }) {
@@ -107,15 +117,24 @@ public class registration extends AppCompatActivity {
                                 new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
+                                        if(response.equals("Successfully Signed In"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Registered successfully",Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(getApplicationContext(), loginpage.class));
+                                        }
+                                        else if(response.equals("Username exist"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Username exists",Toast.LENGTH_SHORT).show();
+                                        }
 
-                                        Toast t = Toast.makeText(getApplicationContext(), "Data Recorded", Toast.LENGTH_SHORT);
-                                        t.show();
+
+
 
                                     }
                                 }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast toast = Toast.makeText(getApplicationContext(), "Unable to connect", Toast.LENGTH_SHORT);
+                                Toast toast = Toast.makeText(getApplicationContext(), "Error Response", Toast.LENGTH_SHORT);
                                 toast.show();
                             }
                         }) {
@@ -131,9 +150,7 @@ public class registration extends AppCompatActivity {
                             }
                         };
                         queue2.add(stringRequest1);
-                        if (queue2.add(stringRequest1).equals(false)) {
-                            Toast.makeText(getApplicationContext(), "User already exists", Toast.LENGTH_SHORT).show();
-                        }
+
                     }
 
 
