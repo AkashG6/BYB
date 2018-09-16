@@ -1,7 +1,6 @@
 package in.dbit.byb.ControlAccess;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,6 +8,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -17,6 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,6 +50,7 @@ public class registration extends AppCompatActivity {
 
         sign = (TextView) findViewById(R.id.sign);
         RequestQueue queue = Volley.newRequestQueue(this);
+        String json;
 
 
         sub.setOnClickListener(new View.OnClickListener() {
@@ -65,13 +69,12 @@ public class registration extends AppCompatActivity {
                         RequestQueue queue1 = Volley.newRequestQueue(registration.this);
                         String url = "http://bybtest.000webhostapp.com/student.php";
 
-                        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                                 new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
 
-                                        Toast t = Toast.makeText(getApplicationContext(), "Data Recorded", Toast.LENGTH_SHORT);
-                                        t.show();
+
 
                                     }
                                 }, new Response.ErrorListener() {
@@ -80,6 +83,7 @@ public class registration extends AppCompatActivity {
                                 Toast toast = Toast.makeText(getApplicationContext(), "Unable to connect", Toast.LENGTH_SHORT);
                                 toast.show();
                             }
+
                         }) {
                             @Override
                             protected Map<String, String> getParams() {
@@ -93,9 +97,6 @@ public class registration extends AppCompatActivity {
                             }
                         };
                         queue1.add(stringRequest);
-                        if (queue1.add(stringRequest).equals(false)) {
-                            Toast.makeText(getApplicationContext(), "User already exists", Toast.LENGTH_SHORT).show();
-                        }
 
 
                     } else {
@@ -130,23 +131,25 @@ public class registration extends AppCompatActivity {
                             }
                         };
                         queue2.add(stringRequest1);
-                        
+                        if (queue2.add(stringRequest1).equals(false)) {
+                            Toast.makeText(getApplicationContext(), "User already exists", Toast.LENGTH_SHORT).show();
+                        }
                     }
 
 
-                } else if (nm.equals(null)) {
+                } else if (nm.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
-                } else if (un.equals(null)) {
+                } else if (un.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Please enter username", Toast.LENGTH_SHORT).show();
 
                 }
-                else if(ps.equals(null))
+                else if(ps.isEmpty())
                     Toast.makeText(getApplicationContext(), "Please enter password", Toast.LENGTH_SHORT).show();
-                else if(em.equals(null))
+                else if(em.isEmpty())
                     Toast.makeText(getApplicationContext(), "Please enter email", Toast.LENGTH_SHORT).show();
                 else if(selectedId == 0)
                     Toast.makeText(getApplicationContext(), "Please Select either faculty or student", Toast.LENGTH_SHORT).show();
-                else
+                else if(nm.isEmpty()&&un.isEmpty()&&ps.isEmpty() && em.isEmpty())
                     Toast.makeText(getApplicationContext(), "Incomplete credentials", Toast.LENGTH_SHORT).show();
 
             }
@@ -155,4 +158,3 @@ public class registration extends AppCompatActivity {
         });
     }
 }
-

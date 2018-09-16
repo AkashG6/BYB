@@ -42,7 +42,7 @@
         <activity android:name=".PersonalityProfiling.Holland" />
         <activity android:name=".PersonalityProfiling.Big5Result" />
         <activity android:name=".PersonalityProfiling.HollandResult" />
-
+<<<<<<< HEAD
         <activity android:name=".PersonalityProfiling.viewpersonality"></activity>
         <activity android:name=".ControlAccess.loginpage"></activity>
         <activity android:name=".ControlAccess.registration"></activity>
@@ -50,3 +50,13 @@
         <activity android:name=".ControlAccess.faculty"></activity>
     </application>
 </manifest>
+=======
+        <activity android:name=".PersonalityProfiling.viewpersonality" />
+        <activity android:name=".ControlAccess.loginpage" />
+        <activity android:name=".ControlAccess.registration" />
+        <activity android:name=".ControlAccess.dbcon" />
+        <activity android:name=".PersonalityProfiling.HollandJobs"></activity>
+        <activity android:name=".ControlAccess.faculty"></activity>
+    </application>
+</manifest>
+>>>>>>> 191164ac1c894913fe016b4e4912deee32b9a9aa

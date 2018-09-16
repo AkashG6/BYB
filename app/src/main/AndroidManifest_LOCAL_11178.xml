@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="in.dbit.byb">
-     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-     <application
+
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,7 +15,8 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".PersonalityProfiling.ProfileHome" />
@@ -42,7 +45,6 @@
         <activity android:name=".PersonalityProfiling.Holland" />
         <activity android:name=".PersonalityProfiling.Big5Result" />
         <activity android:name=".PersonalityProfiling.HollandResult" />
-
         <activity android:name=".PersonalityProfiling.viewpersonality"></activity>
         <activity android:name=".ControlAccess.loginpage"></activity>
         <activity android:name=".ControlAccess.registration"></activity>

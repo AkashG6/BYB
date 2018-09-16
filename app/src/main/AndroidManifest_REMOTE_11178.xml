@@ -32,6 +32,7 @@
         <activity android:name=".Tests.addschedule" />
         <activity android:name=".Tests.manageschedule" />
         <activity android:name=".Tests.goalEvaluation" />
+        <activity android:name=".Tests.reviveTask" />
         <activity android:name=".Tests.HRInterviewquestion" />
         <activity android:name=".Tests.gkquestions" />
         <activity android:name=".Resume_Main" />
@@ -42,11 +43,11 @@
         <activity android:name=".PersonalityProfiling.Holland" />
         <activity android:name=".PersonalityProfiling.Big5Result" />
         <activity android:name=".PersonalityProfiling.HollandResult" />
-
-        <activity android:name=".PersonalityProfiling.viewpersonality"></activity>
-        <activity android:name=".ControlAccess.loginpage"></activity>
-        <activity android:name=".ControlAccess.registration"></activity>
-        <activity android:name=".ControlAccess.dbcon"></activity>
+        <activity android:name=".PersonalityProfiling.viewpersonality" />
+        <activity android:name=".ControlAccess.loginpage" />
+        <activity android:name=".ControlAccess.registration" />
+        <activity android:name=".ControlAccess.dbcon" />
+        <activity android:name=".PersonalityProfiling.HollandJobs"></activity>
         <activity android:name=".ControlAccess.faculty"></activity>
     </application>
 </manifest>
