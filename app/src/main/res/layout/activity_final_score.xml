@@ -15,4 +15,14 @@
         android:textSize="40dp"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:onClick="clickhere"
+        android:layout_width="158dp"
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:text="End Test!" />
 </RelativeLayout>
