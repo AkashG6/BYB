@@ -1,7 +1,9 @@
 package in.dbit.byb.Tests;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +22,7 @@ import in.dbit.byb.R;
 public class final_score extends AppCompatActivity {
 
     TextView txt;
-    String str = "Aptitude";
+    String str;
     String stuff1;
 
     @Override
@@ -32,6 +34,7 @@ public class final_score extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         final Integer stuff = bundle.getInt("stuff");
+        str = bundle.getString("typ").toString();
 
         txt.setText("Final Score: " +stuff);
 
@@ -66,5 +69,10 @@ public class final_score extends AppCompatActivity {
             }
         };
         queue1.add(stringRequest);
+    }
+
+    public void clickhere(View view) {
+        Intent intent = new Intent(final_score.this, testmainpage.class);
+        startActivity(intent);
     }
 }
