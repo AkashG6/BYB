@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp" tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="56dp" />
-</android.support.constraint.ConstraintLayout>
+        android:gravity="center"
+        android:text="Home"
+        android:textSize="40dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="-- Welcome --"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Logout"
+        android:layout_marginTop="20dp"
+        android:id="@+id/logout"/>
+</LinearLayout>

@@ -1,6 +1,7 @@
 package in.dbit.byb.ControlAccess;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,7 @@ public class loginpage extends AppCompatActivity {
     RadioButton r;
     TextView you;
     public String str1,str2;
+    public static final String PREFS_NAME = "LoginPrefs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class loginpage extends AppCompatActivity {
         submit=(Button) findViewById(R.id.login);
         signup=(Button) findViewById(R.id.signup);
         rg=(RadioGroup)findViewById(R.id.rg);
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+
 
         you=(TextView)findViewById(R.id.youare);
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -64,7 +68,7 @@ public class loginpage extends AppCompatActivity {
                                     public void onResponse(String response) {
                                         if (response.equals("Login")) {
                                             Toast.makeText(getApplicationContext(), "Logged In Successfully", Toast.LENGTH_SHORT).show();
-                                            startActivity(new Intent(getApplicationContext(), student.class));
+                                            startActivity(new Intent(loginpage.this,student.class));
                                         } else if (response.equals("invalid")) {
                                             Toast.makeText(getApplicationContext(), "Invalid Login!!Please try again!!", Toast.LENGTH_SHORT).show();
                                         }

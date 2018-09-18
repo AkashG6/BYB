@@ -68,7 +68,7 @@ public class registration extends AppCompatActivity {
                 radioButton = (RadioButton) findViewById(selectedId);
                 String rb = radioButton.getText().toString();
 
-                if (nm != null && un != null && ps != null && em != null && selectedId != 0) {
+                if (!nm.equals("") && !un.equals("") && !ps.equals("") && !em.equals("") && selectedId != 0) {
                     if (rb.equals("Student")) {
                         RequestQueue queue1 = Volley.newRequestQueue(registration.this);
                         String url = "http://bybtest.000webhostapp.com/student.php";
@@ -76,7 +76,19 @@ public class registration extends AppCompatActivity {
                                 new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
-                                        if(response.equals("Successfully Signed In"))
+                                        if(response.equals("Should not contain special characters"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Username should not contain special characters",Toast.LENGTH_SHORT).show();
+                                        }
+                                        else if(response.equals("Values in fields must be at least 6 in length"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Values in fields must be at least 6 in length",Toast.LENGTH_SHORT).show();
+                                        }
+                                        else if(response.equals("Invalid email format"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Incorrect email format",Toast.LENGTH_SHORT).show();
+                                        }
+                                        else if(response.equals("Successfully Signed In"))
                                         {
                                             Toast.makeText(getApplicationContext(),"Registered successfully",Toast.LENGTH_SHORT).show();
                                             startActivity(new Intent(getApplicationContext(), loginpage.class));
@@ -117,7 +129,19 @@ public class registration extends AppCompatActivity {
                                 new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
-                                        if(response.equals("Successfully Signed In"))
+                                        if(response.equals("Should not contain special characters"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Username should not contain special characters.",Toast.LENGTH_SHORT).show();
+                                        }
+                                        else if(response.equals("Values in fields must be at least 6 in length"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Values in fields must be at least 6 in length",Toast.LENGTH_SHORT).show();
+                                        }
+                                        else if(response.equals("Invalid email format"))
+                                        {
+                                            Toast.makeText(getApplicationContext(),"Invalid email format",Toast.LENGTH_SHORT).show();
+                                        }
+                                        else if(response.equals("Successfully Signed In"))
                                         {
                                             Toast.makeText(getApplicationContext(),"Registered successfully",Toast.LENGTH_SHORT).show();
                                             startActivity(new Intent(getApplicationContext(), loginpage.class));
@@ -166,7 +190,7 @@ public class registration extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please enter email", Toast.LENGTH_SHORT).show();
                 else if(selectedId == 0)
                     Toast.makeText(getApplicationContext(), "Please Select either faculty or student", Toast.LENGTH_SHORT).show();
-                else if(nm.isEmpty()&&un.isEmpty()&&ps.isEmpty() && em.isEmpty())
+                else if(nm.equals("")&&un.equals("")&&ps.equals("") && em.equals(""))
                     Toast.makeText(getApplicationContext(), "Incomplete credentials", Toast.LENGTH_SHORT).show();
 
             }
