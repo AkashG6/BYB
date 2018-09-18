@@ -1,100 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".Tests.quantitative">
 
     <TextView
-        android:id="@+id/questext"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="15dp"
-        android:layout_weight="60"
-        android:textSize="30sp"
-        android:text="Question" />
+        android:id="@+id/question"
+        android:layout_width="269dp"
+        android:layout_height="73dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="136dp" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:background="@color/lightgray" />
+    <Button
+        android:id="@+id/choice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="188dp"
+        android:layout_marginStart="43dp"
+        android:text="option1" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="15dp"
-        android:layout_weight="38">
+    <Button
+        android:id="@+id/choice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/question"
+        android:layout_alignTop="@+id/choice1"
+        android:text="option2" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="30">
+    <Button
+        android:id="@+id/choice3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/choice1"
+        android:layout_marginBottom="77dp"
+        android:text="option3" />
 
-            <Button
-                android:id="@+id/opt1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="50"
-                android:text="Option1"
-                android:onClick="optionClick"/>
+    <Button
+        android:id="@+id/choice4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/question"
+        android:layout_alignTop="@+id/choice3"
+        android:text="option4" />
 
-            <Button
-                android:id="@+id/opt2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="50"
-                android:text="Option2"
-                android:onClick="optionClick"/>
-        </TableRow>
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="55dp"
+        android:layout_height="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/question"
+        android:layout_marginTop="61dp"
+        android:text="Score:"
+        android:textSize="18dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="30">
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/score_text"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="173dp"
+        android:text="0" />
 
-            <Button
-                android:id="@+id/opt3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="50"
-                android:text="Option3"
-                android:onClick="optionClick"/>
-
-            <Button
-                android:id="@+id/opt4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="50"
-                android:text="Option4"
-                android:onClick="optionClick"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="40">
-
-            <Button
-                android:id="@+id/btnclear"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="50"
-                android:text="Clear"
-                android:onClick="clearClick"/>
-
-            <Button
-                android:id="@+id/btnconfirm"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="50"
-                android:text="Confirm"
-                android:onClick="confirmClick"/>
-        </TableRow>
-
-    </TableLayout>
-
-</LinearLayout>
+</RelativeLayout>

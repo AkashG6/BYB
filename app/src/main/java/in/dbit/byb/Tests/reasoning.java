@@ -256,6 +256,7 @@ public class reasoning extends AppCompatActivity {
             Intent i = new Intent(reasoning.this, final_score.class);
             Bundle bundle = new Bundle();
             bundle.putInt("stuff", mScore);
+            bundle.putString("typ", "Aptitude_Reasoning");
             i.putExtras(bundle);
             startActivity(i);
         }
