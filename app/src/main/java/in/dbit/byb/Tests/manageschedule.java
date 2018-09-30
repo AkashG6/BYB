@@ -1,5 +1,6 @@
 package in.dbit.byb.Tests;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -106,12 +107,11 @@ public class manageschedule extends AppCompatActivity {
                     // Set click listener for button
                     btn.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
+//                            Log.i("TAG", "index :" + index);
+//                            Toast.makeText(getApplicationContext(), "Clicked Button Index :" + index,Toast.LENGTH_LONG).show();
 
-                            Log.i("TAG", "index :" + index);
-
-                            Toast.makeText(getApplicationContext(),
-                                    "Clicked Button Index :" + index,
-                                    Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(manageschedule.this, upload.class);
+                            startActivity(intent);
                         }
                     });
 
