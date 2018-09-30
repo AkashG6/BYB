@@ -10,8 +10,6 @@ var server = http.createServer(function (req, res) {
     serve(req, res, done);
 });
 
-const io = require('socket.io').listen(server);
-
 server.listen(8000, function () {
     console.log('listening on localhost:8000');
 });
