@@ -68,7 +68,9 @@ public class loginpage extends AppCompatActivity {
                                     public void onResponse(String response) {
                                         if (response.equals("Login")) {
                                             Toast.makeText(getApplicationContext(), "Logged In Successfully", Toast.LENGTH_SHORT).show();
-                                            startActivity(new Intent(loginpage.this,student.class));
+                                            Intent intent= new Intent(loginpage.this,student.class);
+                                            intent.putExtra("username",str1);
+                                            startActivity(intent);
                                         } else if (response.equals("invalid")) {
                                             Toast.makeText(getApplicationContext(), "Invalid Login!!Please try again!!", Toast.LENGTH_SHORT).show();
                                         }
@@ -104,7 +106,9 @@ public class loginpage extends AppCompatActivity {
                                     public void onResponse(String response) {
                                         if (response.equals("Login")) {
                                             Toast.makeText(getApplicationContext(), "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                                            startActivity(new Intent(loginpage.this, faculty.class));
+                                            Intent intent= new Intent(loginpage.this,faculty.class);
+                                            intent.putExtra("username",edt1.getText().toString());
+                                            startActivity(intent);
                                         } else if (response.equals("invalid")) {
                                             Toast.makeText(getApplicationContext(), "Invalid Login!!Please try again", Toast.LENGTH_SHORT).show();
                                         }

@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Home"
+        android:id="@+id/home"
         android:textSize="40dp"/>
 
 
@@ -19,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="-- Welcome --"
+        android:text=""
+        android:id="@+id/welcome"
         android:textSize="30dp"
         android:layout_marginTop="10dp"/>
 
@@ -30,4 +32,16 @@
         android:text="Logout"
         android:layout_marginTop="20dp"
         android:id="@+id/logout"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Edit your profile"
+        android:id="@+id/edit"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Apply for mentor"
+        android:id="@+id/submit"/>
 </LinearLayout>
