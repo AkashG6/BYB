@@ -21,10 +21,12 @@ import android.widget.Toast;
 
 import net.gotev.uploadservice.MultipartUploadRequest;
 import net.gotev.uploadservice.UploadNotificationConfig;
+import net.gotev.uploadservice.UploadService;
 
 import java.io.IOException;
 import java.util.UUID;
 
+import in.dbit.byb.BuildConfig;
 import in.dbit.byb.R;
 
 public class upload extends AppCompatActivity implements View.OnClickListener {
@@ -51,6 +53,7 @@ public class upload extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        UploadService.NAMESPACE = BuildConfig.APPLICATION_ID;
         setContentView(R.layout.activity_upload);
 
         //Requesting storage permission
