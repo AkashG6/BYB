@@ -1,0 +1,22 @@
+{
+  "name": "resume-gen",
+  "version": "1.0.0",
+  "description": "resume gen api test",
+  "main": "server/app.js",
+  "scripts": {
+    "server": "cd server && node server.js",
+    "client": "node app.js",
+    "rm": "cd server && del /f resume.json && del /f resume.pdf",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "finalhandler": "^1.1.1",
+    "fs": "0.0.1-security",
+    "jsonresume-theme-flat": "^0.3.7",
+    "nodemailer": "^4.6.8",
+    "serve-static": "^1.13.2",
+    "socket.io": "2.0.4"
+  }
+}
