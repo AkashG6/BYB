@@ -1,4 +1,4 @@
-package in.dbit.byb;
+package in.dbit.byb.Resume;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
