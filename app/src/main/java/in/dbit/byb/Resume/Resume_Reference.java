@@ -8,20 +8,20 @@ import android.widget.Button;
 
 import in.dbit.byb.R;
 
-public class Resume_Education extends AppCompatActivity {
+public class Resume_Reference extends AppCompatActivity {
     Button next, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resume_education);
+        setContentView(R.layout.activity_resume_reference);
         next = findViewById(R.id.next);
         back = findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Resume_Education.this, Resume_Volunteer.class);
+                Intent intent = new Intent(Resume_Reference.this, Resume_Interest.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class Resume_Education extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Resume_Education.this, Resume_Award.class);
+                Intent intent = new Intent(Resume_Reference.this, Resume_Main.class);
                 startActivity(intent);
             }
         });

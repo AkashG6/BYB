@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="in.dbit.byb">
-     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-     <application
+
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +16,8 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".PersonalityProfiling.ProfileHome" />
@@ -33,24 +36,34 @@
         <activity android:name=".Tests.addschedule" />
         <activity android:name=".Tests.manageschedule" />
         <activity android:name=".Tests.goalEvaluation" />
-        <activity android:name=".Tests.reviveTask"/>
-        <activity android:name=".Tests.upload"/>
+        <activity android:name=".Tests.reviveTask" />
+        <activity android:name=".Tests.upload" />
         <activity android:name=".Tests.HRInterviewquestion" />
         <activity android:name=".Tests.gkquestions" />
-        <activity android:name=".Resume_Main" />
-        <activity android:name=".Resume_Personal" />
-        <activity android:name=".Resume_Education" />
+        <activity android:name=".Resume.Resume_Main" />
+        <activity android:name=".Resume.Resume_Personal" />
+        <activity android:name=".Resume.Resume_Education" />
         <activity android:name=".Tests.descriptionpage" />
         <activity android:name=".PersonalityProfiling.Big5" />
         <activity android:name=".PersonalityProfiling.Holland" />
         <activity android:name=".PersonalityProfiling.Big5Result" />
         <activity android:name=".PersonalityProfiling.HollandResult" />
-
-        <activity android:name=".PersonalityProfiling.viewpersonality"></activity>
-        <activity android:name=".ControlAccess.loginpage"></activity>
-        <activity android:name=".ControlAccess.registration"></activity>
-         <activity android:name=".ControlAccess.faculty"></activity>
-        <activity android:name=".ControlAccess.student"></activity>
-         <activity android:name=".ControlAccess.editpref"></activity>
+        <activity android:name=".PersonalityProfiling.viewpersonality" />
+        <activity android:name=".ControlAccess.loginpage" />
+        <activity android:name=".ControlAccess.registration" />
+        <activity android:name=".ControlAccess.faculty" />
+        <activity android:name=".ControlAccess.student" />
+        <activity android:name=".ControlAccess.editpref" />
+        <activity android:name=".Resume.Resume_Personal2" />
+        <activity android:name=".Resume.Resume_Profile" />
+        <activity android:name=".Resume.Resume_Work" />
+        <activity android:name=".Resume.Resume_Volunteer" />
+        <activity android:name=".Resume.Resume_Award" />
+        <activity android:name=".Resume.Resume_Publication" />
+        <activity android:name=".Resume.Resume_Skills" />
+        <activity android:name=".Resume.Resume_Language" />
+        <activity android:name=".Resume.Resume_Interest" />
+        <activity android:name=".Resume.Resume_Reference"></activity>
     </application>
+
 </manifest>

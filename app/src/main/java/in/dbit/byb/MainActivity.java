@@ -1,13 +1,13 @@
 package in.dbit.byb;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 import in.dbit.byb.PersonalityProfiling.ProfileHome;
-import in.dbit.byb.PersonalityProfiling.introprofiling;
+import in.dbit.byb.Resume.Resume_Main;
 import in.dbit.byb.Tests.testmainpage;
 
 public class MainActivity extends AppCompatActivity {

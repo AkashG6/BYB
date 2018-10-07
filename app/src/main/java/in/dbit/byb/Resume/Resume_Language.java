@@ -1,24 +1,27 @@
-package in.dbit.byb;
+package in.dbit.byb.Resume;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class Resume_Personal extends AppCompatActivity {
-Button next,back;
+import in.dbit.byb.R;
+
+public class Resume_Language extends AppCompatActivity {
+    Button next, back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resume__personal);
-        next=findViewById(R.id.next);
-        back=findViewById(R.id.back);
+        setContentView(R.layout.activity_resume_language);
+        next = findViewById(R.id.next);
+        back = findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Resume_Personal.this,Resume_Main.class);
+                Intent intent = new Intent(Resume_Language.this, Resume_Skills.class);
                 startActivity(intent);
             }
         });
@@ -26,8 +29,8 @@ Button next,back;
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Resume_Personal.this,Resume_Personal.class);
-                //startActivity(intent);
+                Intent intent = new Intent(Resume_Language.this, Resume_Interest.class);
+                startActivity(intent);
             }
         });
     }
