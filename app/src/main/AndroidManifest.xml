@@ -41,8 +41,6 @@
         <activity android:name=".Tests.HRInterviewquestion" />
         <activity android:name=".Tests.gkquestions" />
         <activity android:name=".Resume.Resume_Main" />
-        <activity android:name=".Resume.Resume_Personal" />
-        <activity android:name=".Resume.Resume_Education" />
         <activity android:name=".Tests.descriptionpage" />
         <activity android:name=".PersonalityProfiling.Big5" />
         <activity android:name=".PersonalityProfiling.Holland" />
@@ -54,16 +52,8 @@
         <activity android:name=".ControlAccess.faculty" />
         <activity android:name=".ControlAccess.student" />
         <activity android:name=".ControlAccess.editpref" />
-        <activity android:name=".Resume.Resume_Personal2" />
-        <activity android:name=".Resume.Resume_Profile" />
-        <activity android:name=".Resume.Resume_Work" />
-        <activity android:name=".Resume.Resume_Volunteer" />
-        <activity android:name=".Resume.Resume_Award" />
-        <activity android:name=".Resume.Resume_Publication" />
-        <activity android:name=".Resume.Resume_Skills" />
-        <activity android:name=".Resume.Resume_Language" />
-        <activity android:name=".Resume.Resume_Interest" />
-        <activity android:name=".Resume.Resume_Reference"></activity>
+        <activity android:name=".Resume.Resume_Edit" />
+        <activity android:name=".Resume.Resume_Generate"></activity>
     </application>
 
 </manifest>
