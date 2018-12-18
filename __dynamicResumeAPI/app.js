@@ -1,3 +1,4 @@
+var ip = '192.168.1.6';
 var http = require('http');
 
 var finalhandler = require('finalhandler');
@@ -25,7 +26,7 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-function sendEmail(receiverEmail) {
+function sendEmail(receiverEmail, filename) {
     transporter.sendMail({
         from: 'smtp.byb@gmail.com',
         to: receiverEmail,
@@ -33,7 +34,7 @@ function sendEmail(receiverEmail) {
         text: 'Your Resume is ready !!!',
         attachments: [{
             filename: 'Resume.pdf',
-            path: './server/resume.pdf',
+            path:`./server/resumes/${filename}.pdf`,
             contentType: 'application/pdf'
         }],
         function (err, success) {
@@ -48,23 +49,45 @@ function sendEmail(receiverEmail) {
     });
 }
 
+function generateFilename(parsedJSON) {
+    var name = parsedJSON.basics.name.replace(' ','');
+    var d = new Date();
+    var prefix = [
+        d.getDate(),
+        d.getMonth(),
+        d.getFullYear(),
+        d.getTime()
+    ].join('-');
+    return `${prefix}-${name}`;
+}
+
 io.on('connection', function (socket) {
     socket.on('generate', function (data) {
         console.log('in generate');
         console.log(data.resumeJSON.substring(100));
-        fs.writeFile('./server/resume.json', data.resumeJSON, {flag: 'w'}, function (err) {
-            exec('cd server && resume export --theme flat --format pdf resume.pdf', function (error, stdout, stderr) {
-                console.log(stdout);
-                var url = "http://localhost:8000/resume.pdf"
-                socket.emit('generated', url);
-                let receiverEmail = JSON.parse(data.resumeJSON).basics.email;
-                console.log('parsed email');
-                console.log(receiverEmail);
-                sendEmail(receiverEmail);
-            });
+        var parsedJSON = JSON.parse(data.resumeJSON);
+        var filename = `${generateFilename(parsedJSON)}`
+        var receiverEmail = parsedJSON.basics.email;
+        fs.unlink('./server/resumes/resume.json', function (err) {
+            fs.writeFile(`./server/resumes/resume.json`, data.resumeJSON, {flag: 'w'}, function (err) {
+                var command = `cd server/resumes && resume export --theme flat --format pdf ${filename}.pdf`;
+                exec(command, function (error, stdout, stderr) {
+                    console.log(stdout);
+                    var url = `http://${ip}:8000/resumes/${filename}.pdf`
+                    socket.emit('generated', url);
+                    console.log('parsed email');
+                    console.log(receiverEmail);
+                    if (receiverEmail)
+                        sendEmail(receiverEmail, filename);
+                    else
+                        console.log('Email not present');
+                });
+                if (err)
+                    return console.error(err);
+                });
             if (err)
                 return console.error(err);
-        })
+        });
     });
 });
 

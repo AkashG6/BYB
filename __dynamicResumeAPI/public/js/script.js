@@ -1,4 +1,5 @@
-var socket = io.connect('localhost:3000');
+var ip = '192.168.1.6';
+var socket = io.connect(`${ip}:3000`);
 // var socket = io();
 
 function generate() {
@@ -14,4 +15,3 @@ socket.on('generated', function(url){
     console.log(url);
     window.open(url);
 });
-
