@@ -1,4 +1,4 @@
-var ip = '192.168.1.6';
+var ip = '192.168.31.230';
 var http = require('http');
 
 var finalhandler = require('finalhandler');
@@ -63,13 +63,15 @@ function generateFilename(parsedJSON) {
 
 io.on('connection', function (socket) {
     socket.on('generate', function (data) {
+		data=JSON.stringify(data);
         console.log('in generate');
-        console.log(data.resumeJSON.substring(100));
-        var parsedJSON = JSON.parse(data.resumeJSON);
+		console.log(data);
+        //console.log(data.resumeJSON.substring(100));
+        var parsedJSON = JSON.parse(data);
         var filename = `${generateFilename(parsedJSON)}`
         var receiverEmail = parsedJSON.basics.email;
         fs.unlink('./server/resumes/resume.json', function (err) {
-            fs.writeFile(`./server/resumes/resume.json`, data.resumeJSON, {flag: 'w'}, function (err) {
+            fs.writeFile(`./server/resumes/resume.json`, data, {flag: 'w'}, function (err) {
                 var command = `cd server/resumes && resume export --theme flat --format pdf ${filename}.pdf`;
                 exec(command, function (error, stdout, stderr) {
                     console.log(stdout);
