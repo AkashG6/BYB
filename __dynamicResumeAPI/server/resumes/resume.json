@@ -1,0 +1,87 @@
+{
+  "basics": {
+    "name": "Ivan Maria",
+    "label": "Programmer",
+    "picture": "",
+    "email": "ivanmaria05@gmail.com",
+    "phone": "9920277279",
+    "website": "google.com",
+    "summary": "asdf asdf asdf asd fa sdf asdf asd fa sdf asd fa sdf asdf as df asdf asd fa sdf asd fa sdf asdf as dfa sdf as df asdf asd fa sdf asdf asd fa sdf asd f asdf ",
+    "location": {
+      "address": "asdfadsf asdf asdfasdf asdf adsfasdf adsf asdf asdf ",
+      "postalCode": "400055",
+      "city": "Mumbai",
+      "countryCode": "India",
+      "region": "Maharashtra"
+    },
+    "profiles": [
+      {
+        "network": "fb.com/ivanmaria",
+        "username": "ivanmaria",
+        "url": "google.com"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Seclore",
+      "position": "Product Engineer",
+      "website": "google.com",
+      "startDate": "12-12-2018",
+      "endDate": "12-12-2018",
+      "summary": "asdf asd fa sdf asdf asdf a sdfa sdf asdf a sdf asd fa sdf asdf a sdf",
+      "highlights": "asdf asd fa sdf asdf ads f"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "DBIT",
+      "position": "TPC",
+      "website": "google.com",
+      "startDate": "12-12-2018",
+      "endDate": "12-12-2018",
+      "summary": "adsfsdf adsf asdf asd fasd fasd fasd fasd fasd fasd fas dfasd fasdf ",
+      "highlights": "asd fasd fasd fasdf asdf asdf "
+    }
+  ],
+  "education": [
+    {
+      "institution": "Somaiya",
+      "area": "CS",
+      "studyType": "HSC",
+      "startDate": "12-12-2018",
+      "endDate": "12-12-2018",
+      "gpa": "70",
+      "courses": "CS"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Chess",
+      "date": "12-12-2018",
+      "awarder": "Ivan",
+      "summary": "asdfasdf asdf asdf asd fas dfa sdfa sdf "
+    }
+  ],
+  "publications": [
+    {
+      "name": "TM",
+      "publisher": "TM",
+      "releaseDate": "12-12-2018",
+      "website": "google.com",
+      "summary": "asdf a sdfa sdfa sdfa sdf asdf asdf asdf asdf asdf "
+    }
+  ],
+  "languages": [
+    {
+      "language": "",
+      "fluency": ""
+    }
+  ],
+  "references": [
+    {
+      "name": "asdfasdf",
+      "reference": "asd;lfkasdf"
+    }
+  ]
+}

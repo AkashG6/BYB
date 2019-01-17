@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="in.dbit.byb">
-     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-     <application
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,7 +16,8 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".PersonalityProfiling.ProfileHome" />
@@ -32,17 +36,17 @@
         <activity android:name=".Tests.addschedule" />
         <activity android:name=".Tests.manageschedule" />
         <activity android:name=".Tests.goalEvaluation" />
-        <activity android:name=".Tests.reviveTask"/>
+        <activity android:name=".Tests.reviveTask" />
+        <activity android:name=".Tests.upload" />
         <activity android:name=".Tests.HRInterviewquestion" />
         <activity android:name=".Tests.gkquestions" />
-        <activity android:name=".Resume_Main" />
-        <activity android:name=".Resume_Personal" />
-        <activity android:name=".Resume_Education" />
+        <activity android:name=".Resume.Resume_Main" />
         <activity android:name=".Tests.descriptionpage" />
         <activity android:name=".PersonalityProfiling.Big5" />
         <activity android:name=".PersonalityProfiling.Holland" />
         <activity android:name=".PersonalityProfiling.Big5Result" />
         <activity android:name=".PersonalityProfiling.HollandResult" />
+
 
         <activity android:name=".PersonalityProfiling.viewpersonality"></activity>
         <activity android:name=".ControlAccess.loginpage"></activity>
@@ -53,5 +57,8 @@
          <activity android:name=".ControlAccess.checkrequest"></activity>
          <activity android:name=".ControlAccess.listofmentors"></activity>
          <activity android:name=".ControlAccess.mentordetails"></activity>
+        <activity android:name=".Resume.Resume_Edit" />
+        <activity android:name=".Resume.Resume_Generate"></activity>
     </application>
+
 </manifest>

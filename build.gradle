@@ -7,7 +7,13 @@ buildscript {
         jcenter()
     }
     dependencies {
+<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:3.2.1'
+||||||| merged common ancestors
+        classpath 'com.android.tools.build:gradle:3.2.0-alpha17'
+=======
+        classpath 'com.android.tools.build:gradle:3.2.0'
+>>>>>>> 2e1776507eadabaabaeed61b8fa1406310a85784
         
 
         // NOTE: Do not place your application dependencies here; they belong
