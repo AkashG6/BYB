@@ -13,7 +13,7 @@ import in.dbit.byb.R;
 
 
 public class faculty extends Activity {
-    Button logout;
+    Button logout,check;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class faculty extends Activity {
         setContentView(R.layout.activity_faculty);
 
         logout = (Button) findViewById(R.id.logout);
+        check=(Button)findViewById(R.id.check);
         TextView tv = (TextView) findViewById(R.id.welcome);
         tv.setText("Welcome ," + getIntent().getExtras().getString("username"));
 
@@ -36,6 +37,17 @@ public class faculty extends Activity {
                 finish();   //finish current activity
             }
         });
+
+        check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(faculty.this,checkrequest.class);
+                intent.putExtra("user",getIntent().getExtras().getString("username"));
+                startActivity(intent);
+
+            }
+        });
+
 
     }
 }

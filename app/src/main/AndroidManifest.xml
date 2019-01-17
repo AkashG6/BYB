@@ -50,5 +50,8 @@
          <activity android:name=".ControlAccess.faculty"></activity>
         <activity android:name=".ControlAccess.student"></activity>
          <activity android:name=".ControlAccess.editpref"></activity>
+         <activity android:name=".ControlAccess.checkrequest"></activity>
+         <activity android:name=".ControlAccess.listofmentors"></activity>
+         <activity android:name=".ControlAccess.mentordetails"></activity>
     </application>
 </manifest>

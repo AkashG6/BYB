@@ -31,4 +31,10 @@
         android:text="Logout"
         android:layout_marginTop="20dp"
         android:id="@+id/logout"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Check for Request"
+        android:id="@+id/check"/>
 </LinearLayout>

@@ -42,6 +42,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="Apply for mentor"
+        android:text="Mentors list"
         android:id="@+id/submit"/>
 </LinearLayout>

@@ -24,6 +24,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.sql.Connection;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,6 +39,7 @@ public class registration extends AppCompatActivity {
     EditText email;
     TextView who;
     RadioGroup rg;
+
     RadioButton radioButton;
 
     @Override
@@ -91,7 +93,11 @@ public class registration extends AppCompatActivity {
                                         else if(response.equals("Successfully Signed In"))
                                         {
                                             Toast.makeText(getApplicationContext(),"Registered successfully",Toast.LENGTH_SHORT).show();
-                                            startActivity(new Intent(getApplicationContext(), loginpage.class));
+                                            //startActivity(new Intent(getApplicationContext(), loginpage.class));
+                                            Intent intent = new Intent(registration.this,loginpage.class);
+                                            //putExtra("name",nm);
+                                            //intent.putExtra("email",em);
+                                            startActivity(intent);
                                         }
                                         else if(response.equals("Username exist"))
                                         {

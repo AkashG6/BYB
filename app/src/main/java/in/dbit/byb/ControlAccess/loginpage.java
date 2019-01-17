@@ -135,7 +135,9 @@ public class loginpage extends AppCompatActivity {
                         queue2.add(stringRequest1);
 
                     }
+
                 }
+
 
             }
         });
@@ -147,6 +149,7 @@ public class loginpage extends AppCompatActivity {
                     }
                 });
     }
+
 }
 
 
